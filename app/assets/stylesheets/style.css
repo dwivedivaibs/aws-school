@@ -2229,7 +2229,7 @@ nav .btn-text {
 	transform: rotate(0);
 	-webkit-transform: rotate(0);
 	transform-origin: 100% 0;
- -webkit- transform-origin: 100% 0;
+ 	-webkit-transform-origin: 100% 0;
 	opacity: 0.9;
 }
 }

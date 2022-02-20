@@ -13,6 +13,7 @@
 //= require rails-ujs
 //= require jquery
 //= require jquery_ujs 
+//= require bootstrap.min
 //  https://github.com/rails/jquery-rails
 //= require activestorage
 //= require turbolinks

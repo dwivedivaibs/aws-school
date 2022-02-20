@@ -690,15 +690,7 @@ footer ul li {
 	font-size: 15px;
     line-height: 23px;
 }
-.main_footer__block{
-    background-image: url(assets/footer__bg-block.jpg);
-    background-size: cover;
-    background-position:top center;
-    background-repeat: no-repeat;
-    position: relative;
-    z-index: 1;
-    color: #fff;
-}
+
 .main_footer__block::before {
   background: #13527a none repeat scroll 0 0;
   content: "";

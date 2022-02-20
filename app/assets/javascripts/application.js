@@ -18,7 +18,7 @@
 //= require turbolinks
 //= require_tree .
 
-// $(window).load(function() {
-// 	var preloader = $("#preloader");
-// 	preloader.delay(500).fadeOut();
-// });
+$(window).load(function() {
+	var preloader = $("#preloader");
+	preloader.delay(500).fadeOut();
+});

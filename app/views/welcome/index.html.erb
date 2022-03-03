@@ -236,18 +236,15 @@
       </div>
       <div class="row">
         <div class="col-sm-4">
-          <div class="form border">
-            <form action="http://suditiDEMO SCHOOL.org/contact_send_mail.php" method="post" id="contactFrm" name="contactFrm" style="background-color:#fff;min-height:404px; padding: 12px 10px; height:473px">
-              <div>
-                <h3 style="margin:15px 0px 29px 5px">Enquiry Form</h3>
-                <input type="text" required placeholder="Name" value="" name="name" class="txt" style="width:97%">
-                <input type="text" required placeholder="Phone Number" value="" name="phone" class="txt" style="width:97%">
-                <input type="text" required placeholder="City" value="" name="city" class="txt" style="width:97%">
-                <input type="text" required placeholder="E-mail" value="" name="E-mail" class="txt" style="width:97%">
-                <textarea placeholder="Type your message here" name="mess" class="txt_3" style="width:97%"></textarea>
-                <input type="submit" value="submit" name="submit" class="txt2 blue" style="font-size:12px;">
-              </div>
-            </form>
+          <div class="single_plan__block single_plan__block-img block_bg6 block_bg6 matchHeigh">
+            <div class="plan-content-box plan-content-box__white__bg">
+              <h3>President's Message</h3>
+              <%= image_tag('president.jpg', alt:"DEMO SCHOOL ACADEMY", style: "width: 185px;margin-right: 10px;float:left;") %>
+              <p style="text-align:justify;">"Welcome to The Aristotle World School.<br />Since its inception, Aristotle World School has expanded opportunities for high school and middle school students through innovative programs that prepare them for college and beyond.To prepare educators with the technological skills necessary to enhance learning experiences both online and in the classroom."
+              </p>
+              <h4 style="margin-bottom:0px !important">NIKHIL YADAV</h4>
+              <a href="<%= welcome_chairman_message_path %>" class="more_btn__block" style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>
+            </div>
           </div>
         </div>
         <div class="col-sm-4">
@@ -255,7 +252,7 @@
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>Director's Message</h3>
               <%= image_tag('director.jpg', alt:"DEMO SCHOOL ACADEMY", style: "width: 185px;margin-right: 10px;float:left;") %>
-              <p style="text-align:justify;">"Dear students and parents / Guardians of ARISTOTLE WORLD SCHOOL.It is with great pleasure that I welcome you to our school website. I am honored and feel very privileged to be the Principal of Aristotle World School, Etawah.On behalf of the entire team at AWS, I welcome you all to the Aristotle family. It is extremely exciting to begin the academic year 2019-20. At AWS, the goal of education is to provide an environment to the pupils which incorporates authentic learning and personal development. It allows learners to solve the types of complex problems they face in today’s ever-changing and ever-evolving world."
+              <p style="text-align:justify;">"Dear students and parents / Guardians of ARISTOTLE WORLD SCHOOL.It is with great pleasure that I welcome you to our school website. I am honored and feel very privileged to be the Principal of Aristotle World School, Etawah.On behalf of the entire team at AWS, I welcome you all to the Aristotle family. It is extremely exciting to begin the academic year 2019-20."
               </p>
               <h4 style="margin-bottom:0px !important">MRS. RITA SINGH</h4>
               <a href="<%= welcome_chairman_message_path %>" class="more_btn__block" style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>
@@ -267,7 +264,7 @@
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>Principal's Message</h3>
               <%= image_tag('principal.jpg', alt:"DEMO SCHOOL ACADEMY", style: "width: 160px;margin-right: 10px;float:left;") %>
-              <p style="text-align:justify;">"Dear students and parents / Guardians of ARISTOTLE WORLD SCHOOL.It is with great pleasure that I welcome you to our school website. I am honored and feel very privileged to be the Principal of Aristotle World School, Etawah.On behalf of the entire team at AWS, I welcome you all to the Aristotle family. It is extremely exciting to begin the academic year 2019-20. At AWS, the goal of education is to provide an environment to the pupils which incorporates authentic learning and personal development. It allows learners to solve the types of complex problems they face in today’s ever-changing and ever-evolving world."
+              <p style="text-align:justify;">"Dear students and parents / Guardians of ARISTOTLE WORLD SCHOOL.It is with great pleasure that I welcome you to our school website. I am honored and feel very privileged to be the Principal of Aristotle World School, Etawah.On behalf of the entire team at AWS, I welcome you all to the Aristotle family. It is extremely exciting to begin the academic year 2019-20."
               </p>
               <h4>Mr. VED PATHI TIWARI</h4>
               <a href="<%= welcome_principal_message_path %>" class="more_btn__block"  style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>

@@ -49,7 +49,7 @@
     display: inline-block;
     font-size: 65px;
        line-height: 115px;
-        color: #daa106
+        color: #f89f58
 }
 .top_section__block {
     margin-top: -48px;
@@ -86,7 +86,7 @@ p.blue_text__block {
     text-align: center;
     top: 50%;
     width: 60px;
-	color: #daa106;;
+	color: #f89f58;;
 }
 .box_content__block h2 span {
     color: #222222;
@@ -152,7 +152,7 @@ p.blue_text__block {
 	left:0;
 	height:160px;
 	width:100%;
-	background:#daa106;
+	background:#f89f58;
 }
 
 /*Plane Section style start here*/
@@ -195,7 +195,7 @@ p.blue_text__block {
 }
 
 .single_plan__block.blue__block::before {
-    background: #feb20d;
+    background: #f89f58;
 }
 .plan-content-box {
     background: #13527a none repeat scroll 0 0 !important;
@@ -250,7 +250,7 @@ p.blue_text__block {
 }
 
 .blue__block .plan-content-box {
-    background: #feb20d none repeat scroll 0 0;
+    background: #f89f58 none repeat scroll 0 0;
     color: #333333;
 }
 .single_plan__block.blue__block::after {
@@ -266,7 +266,7 @@ p.blue_text__block {
     position: relative;
 }
 .plan-content-box h3::after {
-    background: #feb20d none repeat scroll 0 0;
+    background: #f89f58 none repeat scroll 0 0;
     bottom: -15px;
     content: "";
     height: 3px;
@@ -360,7 +360,7 @@ p.blue_text__block {
 }
 
 .member_S_links__block a:hover i.fa {
-    color: #feb20d;
+    color: #f89f58;
 }
 
 .author__block {
@@ -531,7 +531,7 @@ p.blue_text__block {
     content: '';
     width: 2px;
     height: 64px;
-    background: #daa106;
+    background: #f89f58;
     position: absolute;
     top: 17px;
     right: 0;
@@ -578,7 +578,7 @@ p.blue_text__block {
 }
 /*Contact section*/
 .bottom-section{
-	    background: #daa106;
+	    background: #f89f58;
 }
 .contact_block-text{
 	    padding-top: 32px;
@@ -664,7 +664,7 @@ footer ul li {
     position: relative;
 }
 .top_footer_info__block {
-    background: #feb20d none repeat scroll 0 0;
+    background: #f89f58 none repeat scroll 0 0;
     color: #13527a;
 }
 .single_info__block h4 span {
@@ -772,4 +772,4 @@ footer ul li {
     text-decoration:none;
 }
 
-.blue:hover{background-color: #f6bb18; color: #13527a}
+.blue:hover{background-color: #f89f58; color: #13527a}

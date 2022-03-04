@@ -17,4 +17,6 @@ class WelcomeController < ApplicationController
   def principal_message
   	
   end
+  def mandatory_public_disclosure
+  end
 end

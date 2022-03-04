@@ -26,11 +26,12 @@ install_plugin Capistrano::SCM::Git
 #   https://github.com/capistrano/rails
 #   https://github.com/capistrano/passenger
 #
-# require "capistrano/rvm"
-# require "capistrano/rbenv"
-# require "capistrano/chruby"
-# require "capistrano/bundler"
-# require "capistrano/rails/assets"
+require 'capistrano/rails'
+require 'capistrano/bundler'
+require 'capistrano/rvm'
+require 'capistrano/puma'
+install_plugin Capistrano::Puma, load_hooks: false  # Default puma tasks without hooks
+install_plugin Capistrano::Puma::Monit, load_hooks: false  # Monit tasks without hooks
 # require "capistrano/rails/migrations"
 # require "capistrano/passenger"
 

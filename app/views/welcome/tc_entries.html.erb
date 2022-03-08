@@ -1,0 +1,57 @@
+<div id="content" class="site-content">
+  <div class="hmc-container">
+    <div data-elementor-type="wp-page" data-elementor-id="405" class="elementor elementor-405" data-elementor-settings="[]">
+      <div class="elementor-inner">
+        <div class="elementor-section-wrap">
+          <section class="elementor-section elementor-top-section elementor-element elementor-element-ec85ad7 elementor-section-height-min-height elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="ec85ad7" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="elementor-background-overlay"></div>
+            <div class="elementor-container elementor-column-gap-default">
+              <div class="elementor-row">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6e4dbfc" data-id="6e4dbfc" data-element_type="column">
+                  <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                      <div class="elementor-element elementor-element-209cb0e elementor-widget elementor-widget-heading" data-id="209cb0e" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                          <h2 class="elementor-heading-title elementor-size-default">TC Sample Certificate</h2>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="elementor-section elementor-top-section elementor-element elementor-element-0ba3523 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0ba3523" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+            <div class="elementor-container elementor-column-gap-default">
+              <div class="elementor-row">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-535bc0d" data-id="535bc0d" data-element_type="column">
+                  <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                      <div class="elementor-element elementor-element-5c07d80 elementor-widget elementor-widget-text-editor" data-id="5c07d80" data-element_type="widget" data-widget_type="text-editor.default">
+                        <div class="elementor-widget-container">
+                          <div class="elementor-text-editor elementor-clearfix">
+                            <div>
+                              <% if @document && @document.file.url %>
+                                <object data="<%= asset_path(@document.file.url) %>" type="application/pdf" width="300" height="700">
+                                </object>
+                              <% else %>
+                                <object data="/assets/TC_form.pdf" type="application/pdf" width="300" height="700">
+                                </object>
+                              <% end %>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- .hmc-container -->
+</div>
+<!-- #content -->

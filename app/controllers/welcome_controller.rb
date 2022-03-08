@@ -19,4 +19,8 @@ class WelcomeController < ApplicationController
   end
   def mandatory_public_disclosure
   end
+
+  def contact
+    
+  end
 end

@@ -7,7 +7,11 @@
 	      </svg>
 	    </label>
 	    <a href="#">
-        <%= image_tag('popup_suditi_school.jpg', alt:"", width: "550px;") %>
+        <% if @banner_image.present? %>
+          <%= image_tag(@banner_image.image.url, width: "550px;") %>
+        <% else %>
+          <%= image_tag('popup_suditi_school.jpg', alt:"", width: "550px;") %>
+        <% end %>
 	    </a>
 	  </div>
 	</div>
@@ -16,7 +20,11 @@
       <div id="rev_slider_34_1" class="rev_slider" data-version="5.0.7">
         <ul>
           <li data-index="rs-129">
-            <%= image_tag('slider1.jpg', alt:"", class: "rev-slidebg") %>
+            <% if @slider_images.present? %>
+              <%= image_tag(@slider_images.first.image.url, class: "rev-slidebg") %>
+            <% else %>
+              <%= image_tag('slider1.jpg', alt:"", class: "rev-slidebg") %>
+            <% end %>
             <div class="tp-caption Newspaper-Title tp-resizeme"
               id="slide-129-layer-1"
               data-x="['left','left','left','left']" data-hoffset="['100','50','50','30']"
@@ -47,7 +55,11 @@
           <!-- SLIDE  -->
           <li data-index="rs-130" data-title="" data-description="">
             <!-- MAIN IMAGE -->
-            <%= image_tag('slider2.jpg', alt:"", class: "rev-slidebg") %>
+            <% if @slider_images.present? && @slider_images.count >= 2 %>
+              <%= image_tag(@slider_images.second.image.url, class: "rev-slidebg") %>
+            <% else %>
+              <%= image_tag('slider2.jpg', alt:"", class: "rev-slidebg") %>
+            <% end %>
             <!-- LAYERS -->
             <!-- LAYER NR. 2 -->
             <div class="tp-caption Newspaper-Title   tp-resizeme "
@@ -80,8 +92,11 @@
           <!-- SLIDE  -->
           <li data-index="rs-131">
             <!-- MAIN IMAGE -->
-            <%= image_tag('slider3.jpg', alt:"", class: "rev-slidebg") %>
-            <!-- LAYERS -->
+            <% if @slider_images.present? && @slider_images.count > 2 %>
+              <%= image_tag(@slider_images.third.image.url, class: "rev-slidebg") %>
+            <% else %>
+              <%= image_tag('slider3.jpg', alt:"", class: "rev-slidebg") %>
+            <% end %>
             <!-- LAYER NR. 2 -->
             <div class="tp-caption Newspaper-Title   tp-resizeme "
               id="slide-131-layer-1"
@@ -171,8 +186,13 @@
           </p>
           <p align="right"><a href="<%= welcome_about_us_path %>" class="blue" style="font-size:12px;">Read More</a></p>
         </div>
-        <div class="col-sm-12 col-md-4" style="padding-top:35px; padding-bottom: 35px"> 
-          <%= image_tag('about-img.jpg', alt:"DEMO SCHOOL ACADEMY", style:"height: 320px;") %>
+        <div class="col-sm-12 col-md-4" style="padding-top:35px; padding-bottom: 35px">
+          <% if @about_image.present? %>
+            <%= image_tag(@about_image.image.url, alt:"DEMO SCHOOL ACADEMY", style:"height: 320px;") %>
+          <% else %>
+            <%= image_tag('about-img.jpg', alt:"DEMO SCHOOL ACADEMY", style:"height: 320px;") %>
+          <% end %>
+          
         </div>
         <div class="clear"></div>
         <div class="salient_features">
@@ -278,75 +298,26 @@
       </div>
       <!-- End work Filter -->
       <div class="row container-grid nf-col-3" style="position: relative;">
-        <div class="col-md-4 nf-item photo spacing">
-          <div class="item-box">
-            <a> 
-              <%= image_tag('23s.jpg',class: "item-container") %>
-            </a>
-            <div class="link-zoom">
-              <!--<a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>-->
-              <a href="assets/portfolio/18.jpg" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+        <% @photos.each do |photo|%>
+          <div class="col-md-4 nf-item photo spacing">
+            <div class="item-box">
+              <a>
+                <%= image_tag(photo.image.url, class: "item-container") %>
+              </a>
+              <div class="link-zoom">
+                <!--<a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>-->
+                <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 nf-item photo spacing">
-          <div class="item-box">
-            <a> 
-              <%= image_tag('23s.jpg',class: "item-container") %> </a>
-            <div class="link-zoom">
-              <!--<a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>-->
-              <a href="assets/portfolio/19.jpg" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 nf-item design spacing">
-          <div class="item-box">
-            <a> 
-              <%= image_tag('23s.jpg',class: "item-container") %>
-            </a>
-            <div class="link-zoom">
-              <!--<a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>-->
-              <a href="assets/portfolio/20.jpg" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 nf-item coffee spacing">
-          <div class="item-box">
-            <a> 
-              <%= image_tag('23s.jpg',class: "item-container") %>
-            </a>
-            <div class="link-zoom">
-              <!--<a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a-->
-              <a href="assets/portfolio/21.jpg" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 nf-item design spacing">
-          <div class="item-box">
-            <a> 
-              <%= image_tag('23s.jpg',class: "item-container") %>
-            </a>
-            <div class="link-zoom">
-              <!--<a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>-->
-              <a href="assets/portfolio/22.jpg" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 nf-item design spacing">
-          <div class="item-box">
-            <a> 
-              <%= image_tag('23s.jpg',class: "item-container") %>
-            </a>
-            <div class="link-zoom">
-              <!--<a href="portfolio-single.html" class="project_links"> <i class="fa fa-link"> </i> </a>-->
-              <a href="assets/portfolio/23.jpg" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
   </section>
     <style>
+      .item-box {
+        height: 250px;
+      }
     .nav > li > a:hover, .nav > li > a:focus{
       background-color: #67973b !important;
     }

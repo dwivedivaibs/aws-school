@@ -25,6 +25,7 @@ Rails.application.routes.draw do
   get 'welcome/building_safety_certificate'
 
   get 'welcome/fee_stracture'
+  get 'welcome/norms_of_fixing_fee'
   get 'welcome/student_strength'
   get 'welcome/tc_entries'
   get 'welcome/activities_compatitions'

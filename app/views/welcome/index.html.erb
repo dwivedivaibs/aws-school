@@ -278,7 +278,11 @@
           <div class="single_plan__block single_plan__block-img block_bg6 block_bg6 matchHeigh">
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>President's Message</h3>
-              <%= image_tag('president.jpg', alt:"DEMO SCHOOL ACADEMY", style: "width: 185px;margin-right: 10px;float:left;") %>
+              <% if @manager_photo.present? %>
+                <%= image_tag(@manager_photo.image.url, alt:"president", style: "width: 185px;margin-right: 10px;float:left;") %>
+              <% else %>
+                <%= image_tag('president.jpg', alt:"president", style: "width: 185px;margin-right: 10px;float:left;") %>
+              <% end %>
               <% if @president_message.present? %>
                 <p><%= raw @president_message.description %></p>
               <% else %>
@@ -294,7 +298,11 @@
           <div class="single_plan__block single_plan__block-img block_bg6 block_bg6 matchHeigh">
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>Director's Message</h3>
-              <%= image_tag('director.jpg', alt:"DEMO SCHOOL ACADEMY", style: "width: 185px;margin-right: 10px;float:left;") %>
+              <% if @director_photo.present? %>
+                <%= image_tag(@director_photo.image.url, alt:"Director", style: "width: 185px;margin-right: 10px;float:left;") %>
+              <% else %>
+                <%= image_tag('director.jpg', alt:"Director", style: "width: 185px;margin-right: 10px;float:left;") %>
+              <% end %>
               <% if @director_message.present? %>
                 <p><%= raw @director_message.description %></p>
               <% else %>
@@ -309,7 +317,11 @@
           <div class="single_plan__block single_plan__block-img block_bg6 block_bg6 matchHeigh">
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>Principal's Message</h3>
-              <%= image_tag('principal.jpg', alt:"DEMO SCHOOL ACADEMY", style: "width: 160px;margin-right: 10px;float:left;") %>
+              <% if @principal_photo.present? %>
+                <%= image_tag(@principal_photo.image.url, alt:"Principal", style: "width: 185px;margin-right: 10px;float:left;") %>
+              <% else %>
+                <%= image_tag('principal.jpg', alt:"Principal", style: "width: 160px;margin-right: 10px;float:left;") %>
+              <% end %>
               <% if @principal_message.present? %>
                 <p><%= raw @principal_message.description %></p>
               <% else %>

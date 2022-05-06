@@ -18,7 +18,9 @@ class WelcomeController < ApplicationController
     @president_message = Content.where(content_type: 'president_message').last
     @director_message = Content.where(content_type: 'director_message').last
     @principal_message = Content.where(content_type: 'principal_message').last
-    
+    @principal_photo = GalleryImage.active.where(section: 'principal_photo').last
+    @manager_photo = GalleryImage.active.where(section: 'manager_photo').last
+    @director_photo = GalleryImage.active.where(section: 'director_photo').last
   end
 
   def gallery

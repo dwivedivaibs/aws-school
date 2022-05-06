@@ -46,8 +46,11 @@
               <div class="banner-text">
                 <span class="sub-text"></span>
                 <h2>Aristotle World School</h2>
-                <p>(AFFILIATED WITH CBSE, NEW DELHI, AFFILIATION NO. 2133211)
-                </p>
+                <% if @slider_one.present? %>
+                  <p><% raw @slider_one.description %></p>
+                <% else %>
+                  <p>(AFFILIATED WITH CBSE, NEW DELHI, AFFILIATION NO. 2133211)</p>
+                <% end %>
                 <a class="btn-text" href="<%= welcome_about_us_path %>"> read more</a>
               </div>
             </div>
@@ -83,8 +86,11 @@
               <div class="banner-text">
                 <span class="sub-text"></span>
                  <h2>Aristotle World School</h2>
-                <p>(AFFILIATED WITH CBSE, NEW DELHI, AFFILIATION NO. 2133211)
-                </p>
+                <% if @slider_two.present? %>
+                  <p><% raw @slider_two.description %></p>
+                <% else %>
+                  <p>(AFFILIATED WITH CBSE, NEW DELHI, AFFILIATION NO. 2133211)</p>
+                <% end %>
                 <a class="btn-text" href="<%= welcome_about_us_path %>"> read more</a>
               </div>
             </div>
@@ -119,8 +125,11 @@
               <div class="banner-text">
                 <span class="sub-text"></span>
                  <h2>Aristotle World School</h2>
-                <p>(AFFILIATED WITH CBSE, NEW DELHI, AFFILIATION NO. 2133211)
-                </p>
+                <% if @slider_three.present? %>
+                  <p><% raw @slider_three.description %></p>
+                <% else %>
+                  <p>(AFFILIATED WITH CBSE, NEW DELHI, AFFILIATION NO. 2133211)</p>
+                <% end %>
                 <a class="btn-text" href="<%= welcome_about_us_path %>"> read more</a>
               </div>
             </div>
@@ -141,7 +150,11 @@
             </div>
             <div class="single_text__block">
               <h2>Activities</h2>
-              <p>Teaching does not need to be limited to textbooks and blackboards. With our fun school activities for kids, learning in school becomes an interesting and enjoyable exercise.</p>
+              <% if @activity.present? %>
+                <p><% raw @activity.description %></p>
+              <% else %>
+                <p>Teaching does not need to be limited to textbooks and blackboards. With our fun school activities for kids, learning in school becomes an interesting and enjoyable exercise.</p>
+              <% end %>
             </div>
           </div>
         </div>

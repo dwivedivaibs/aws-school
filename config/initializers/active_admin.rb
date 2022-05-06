@@ -105,6 +105,8 @@ ActiveAdmin.setup do |config|
   # Default:
   config.logout_link_path = :destroy_admin_user_session_path
 
+  config.register_javascript 'ckeditor/init.js'
+
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
   #

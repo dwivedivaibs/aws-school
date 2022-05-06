@@ -1,11 +1,11 @@
 CarrierWave.configure do |config|
   config.storage    = :aws
-  config.aws_bucket = ENV['S3_BUCKET_NAME']
+  config.aws_bucket ='school-erp'
   config.aws_acl    = 'public-read'
   config.aws_authenticated_url_expiration = 60 * 60 * 24 * 7
   config.aws_credentials = {
-    access_key_id:     ENV['AWS_ACCESS_KEY_ID'],
-    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
-    region:            ENV['AWS_REGION'] # Required
+    access_key_id:     'AKIARFGOZSJ6VYK4LFXT',
+    secret_access_key: '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',
+    region:            'us-east-1' # Required
   }
 end

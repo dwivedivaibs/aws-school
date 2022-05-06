@@ -17,7 +17,7 @@
 //  https://github.com/rails/jquery-rails
 //= require activestorage
 //= require turbolinks
-//= require ckeditor/init
+//= require ckeditor/config
 
 //= require_tree .
 

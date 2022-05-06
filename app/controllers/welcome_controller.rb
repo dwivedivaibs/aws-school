@@ -26,17 +26,24 @@ class WelcomeController < ApplicationController
   end
   
   def about_us
-  	
+  	@about_us = Content.where(content_type: 'about_us').last
   end
+
   def mission
   	
   end
   def chairman_message
-  	
+  	@president_message = Content.where(content_type: 'president_message').last
   end
+
   def principal_message
-  	
+  	@principal_message = Content.where(content_type: 'principal_message').last
   end
+
+  def director
+    @director_message = Content.where(content_type: 'director_message').last
+  end
+
   def mandatory_public_disclosure
   end
 

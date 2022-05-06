@@ -14,5 +14,6 @@ class Content < ApplicationRecord
     ["President Message", "president_message"],
     ["Director Message", "director_message"],
     ["Principal's Message", "principal_message"],
+    ["About Us Page", "about_us"]
   ]
 end

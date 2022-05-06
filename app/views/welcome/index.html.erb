@@ -47,7 +47,7 @@
                 <span class="sub-text"></span>
                 <h2>Aristotle World School</h2>
                 <% if @slider_one.present? %>
-                  <p><% raw @slider_one.description %></p>
+                  <p><%= raw @slider_one.description %></p>
                 <% else %>
                   <p>(AFFILIATED WITH CBSE, NEW DELHI, AFFILIATION NO. 2133211)</p>
                 <% end %>
@@ -87,7 +87,7 @@
                 <span class="sub-text"></span>
                  <h2>Aristotle World School</h2>
                 <% if @slider_two.present? %>
-                  <p><% raw @slider_two.description %></p>
+                  <p><%= raw @slider_two.description %></p>
                 <% else %>
                   <p>(AFFILIATED WITH CBSE, NEW DELHI, AFFILIATION NO. 2133211)</p>
                 <% end %>
@@ -126,7 +126,7 @@
                 <span class="sub-text"></span>
                  <h2>Aristotle World School</h2>
                 <% if @slider_three.present? %>
-                  <p><% raw @slider_three.description %></p>
+                  <p><%= raw @slider_three.description %></p>
                 <% else %>
                   <p>(AFFILIATED WITH CBSE, NEW DELHI, AFFILIATION NO. 2133211)</p>
                 <% end %>
@@ -151,7 +151,7 @@
             <div class="single_text__block">
               <h2>Activities</h2>
               <% if @activity.present? %>
-                <p><% raw @activity.description %></p>
+                <p><%= raw @activity.description %></p>
               <% else %>
                 <p>Teaching does not need to be limited to textbooks and blackboards. With our fun school activities for kids, learning in school becomes an interesting and enjoyable exercise.</p>
               <% end %>
@@ -165,9 +165,13 @@
             </div>
             <div class="single_text__block">
               <h2>Infrastructure</h2>
-              <p>The school building and playground with greenery all around, the school campus is designed to cater to the needs of young, growing children.
-                The school boasts of the modern facilities.
-              </p>
+              <% if @infrastructure.present? %>
+                <p><%= raw @infrastructure.description %></p>
+              <% else %>
+                <p>The school building and playground with greenery all around, the school campus is designed to cater to the needs of young, growing children.
+                  The school boasts of the modern facilities.
+                </p>
+              <% end %>
             </div>
           </div>
         </div>
@@ -178,7 +182,11 @@
             </div>
             <div class="single_text__block">
               <h2>Facilities</h2>
-              <p>We have a well-equipped range of facilities and resources for all students to help them achieve a well-rounded education in a child-friendly atmosphere. The school has a well stocked library.</p>
+              <% if @facilities.present? %>
+                <p><%= raw @facilities.description %></p>
+              <% else %>
+                <p>We have a well-equipped range of facilities and resources for all students to help them achieve a well-rounded education in a child-friendly atmosphere. The school has a well stocked library.</p>
+              <% end %>
             </div>
           </div>
         </div>
@@ -193,11 +201,15 @@
             Welcome to <br>
             <span style="font-size: 30px">Aristotle World School</span>
           </h2>
-          <p style="font-size: 14px; text-align:justify">
-            The founders and promoters of Aristotle World School comprises of illustrious entrepreneurs, renowned educationists, great Social Workers and philanthropists who from the core of their heart always felt the need to create a Sanctuary of Education, a school of their dreams, providing world-class facilities but not letting the Indian philosophy, culture and tradition dilute in the process.<br />
-            This dream and vision led the group to establish ‘R.S. Educational Society’ (RSES) in the year 2016. The Trust immediately identified a prime land on the National Highway-2 (Near Etawah City). Henceforth the construction of this dream educational institute started with an experienced team of architects, interior designers, engineers, and educationist.
-          </p>
-          <p align="right"><a href="<%= welcome_about_us_path %>" class="blue" style="font-size:12px;">Read More</a></p>
+          <% if @welcome_section.present? %>
+            <p style="font-size: 14px; text-align:justify"><%= raw @welcome_section.description %></p>
+          <% else %>
+            <p style="font-size: 14px; text-align:justify">
+              The founders and promoters of Aristotle World School comprises of illustrious entrepreneurs, renowned educationists, great Social Workers and philanthropists who from the core of their heart always felt the need to create a Sanctuary of Education, a school of their dreams, providing world-class facilities but not letting the Indian philosophy, culture and tradition dilute in the process.<br />
+              This dream and vision led the group to establish ‘R.S. Educational Society’ (RSES) in the year 2016. The Trust immediately identified a prime land on the National Highway-2 (Near Etawah City). Henceforth the construction of this dream educational institute started with an experienced team of architects, interior designers, engineers, and educationist.
+            </p>
+          <% end %>
+          <p align="right"><a href="<%= welcome_about_us_path %>" class="blue more_btn__block" style="font-size:12px;">Read More</a></p>
         </div>
         <div class="col-sm-12 col-md-4" style="padding-top:35px; padding-bottom: 35px">
           <% if @about_image.present? %>
@@ -267,10 +279,14 @@
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>President's Message</h3>
               <%= image_tag('president.jpg', alt:"DEMO SCHOOL ACADEMY", style: "width: 185px;margin-right: 10px;float:left;") %>
-              <p style="text-align:justify;">"Welcome to The Aristotle World School.<br />Since its inception, Aristotle World School has expanded opportunities for high school and middle school students through innovative programs that prepare them for college and beyond.To prepare educators with the technological skills necessary to enhance learning experiences both online and in the classroom."
-              </p>
+              <% if @president_message.present? %>
+                <p><%= raw @president_message.description %></p>
+              <% else %>
+                <p style="text-align:justify;">"Welcome to The Aristotle World School.<br />Since its inception, Aristotle World School has expanded opportunities for high school and middle school students through innovative programs that prepare them for college and beyond.To prepare educators with the technological skills necessary to enhance learning experiences both online and in the classroom."
+                </p>
+              <% end %>
               <h4 style="margin-bottom:0px !important">NIKHIL YADAV</h4>
-              <a href="<%= welcome_chairman_message_path %>" class="more_btn__block" style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>
+              <a href="<%= welcome_chairman_message_path %>" class="more_btn__block pull-right" style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
         </div>
@@ -279,10 +295,13 @@
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>Director's Message</h3>
               <%= image_tag('director.jpg', alt:"DEMO SCHOOL ACADEMY", style: "width: 185px;margin-right: 10px;float:left;") %>
-              <p style="text-align:justify;">"Dear students and parents / Guardians of ARISTOTLE WORLD SCHOOL.It is with great pleasure that I welcome you to our school website. I am honored and feel very privileged to be the Principal of Aristotle World School, Etawah.On behalf of the entire team at AWS, I welcome you all to the Aristotle family. It is extremely exciting to begin the academic year 2019-20."
-              </p>
+              <% if @director_message.present? %>
+                <p><%= raw @director_message.description %></p>
+              <% else %>
+                <p style="text-align:justify;">"Dear students and parents / Guardians of ARISTOTLE WORLD SCHOOL.It is with great pleasure that I welcome you to our school website. I am honored and feel very privileged to be the Principal of Aristotle World School, Etawah.On behalf of the entire team at AWS, I welcome you all to the Aristotle family. It is extremely exciting to begin the academic year 2019-20."</p>
+              <% end %>
               <h4 style="margin-bottom:0px !important">MRS. RITA SINGH</h4>
-              <a href="<%= welcome_chairman_message_path %>" class="more_btn__block" style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>
+              <a href="<%= welcome_chairman_message_path %>" class="more_btn__block pull-right" style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
         </div>
@@ -291,10 +310,14 @@
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>Principal's Message</h3>
               <%= image_tag('principal.jpg', alt:"DEMO SCHOOL ACADEMY", style: "width: 160px;margin-right: 10px;float:left;") %>
-              <p style="text-align:justify;">"Dear students and parents / Guardians of ARISTOTLE WORLD SCHOOL.It is with great pleasure that I welcome you to our school website. I am honored and feel very privileged to be the Principal of Aristotle World School, Etawah.On behalf of the entire team at AWS, I welcome you all to the Aristotle family. It is extremely exciting to begin the academic year 2019-20."
-              </p>
+              <% if @principal_message.present? %>
+                <p><%= raw @principal_message.description %></p>
+              <% else %>
+                <p style="text-align:justify;">"Dear students and parents / Guardians of ARISTOTLE WORLD SCHOOL.It is with great pleasure that I welcome you to our school website. I am honored and feel very privileged to be the Principal of Aristotle World School, Etawah.On behalf of the entire team at AWS, I welcome you all to the Aristotle family. It is extremely exciting to begin the academic year 2019-20."
+                </p>
+              <% end %>
               <h4>Mr. VED PATHI TIWARI</h4>
-              <a href="<%= welcome_principal_message_path %>" class="more_btn__block"  style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>
+              <a href="<%= welcome_principal_message_path %>" class="more_btn__block pull-right" style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>
             </div>
           </div>
         </div>

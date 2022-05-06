@@ -30,7 +30,7 @@ ActiveAdmin.register Content do
   form do |f|
     f.inputs do
       f.input :content_type, :label => 'Select Content Type', :as => :select, :collection => Content::CONTENT_TYPES
-      f.input :description, as: :ckeditor
+      f.input :description, as: :ckeditor, :input_html => { :class => "ckeditor" }
     end
     f.actions
   end

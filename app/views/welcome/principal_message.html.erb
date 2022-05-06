@@ -22,39 +22,17 @@
               <%= image_tag('principal.jpg', style: "border:2px solid #67973b") %></figure>
           </div>
         </div>
+        <% if @principal_message.present? %>
+          <p><%= raw @principal_message.description %></p>
+        <% else %>
          <p class="inner-p">
           Dear students and parents / Guardians of&nbsp;<strong><b>ARISTOTLE WORLD SCHOOL</b></strong><strong><b>.</b></strong></p><p><b> </b>It is with great pleasure that I welcome you to our school website. I am honored and feel very privileged to be the Principal of <strong><b>Aristotle World School, Etawah.</b></strong></p><p>On behalf of the entire team at AWS, I welcome you all to the Aristotle family. It is extremely exciting to begin the academic year 2019-20. At AWS, the goal of education is to provide an environment to the pupils which incorporates authentic learning and personal development. It allows learners to solve the types of complex problems they face in today’s ever-changing and ever-evolving world.</p><p>Our school has an outstanding reputation for establishing high expectations and achieving excellent academic results. Talents too are constantly developed through sports and varied co-curricular activities. This, in turn, results in widening the scope of education and makes it more consequential.</p><p>We believe that excellence is the gradual result of always striving to do better, hence our Motto “In Pursuit of Excellence!”</p><p>Parents play a vital role in the overall development of the child. The foundation of a successful school is the cooperation between the students, staff, and parents.</p><p>In conclusion, I wish you all a very wonderful and a gainful school year.</p><p><strong><b>Aristotle World School, Carlow: “The Energy of mind is the Essence of life…!”</b></strong></p><p>I hope you enjoy your visit to the website.</p><p>Yours in Education,
           </p>
+        <% end %>
         <p class="inr-hd"><b style="font-size:20px">VED PATHI TIWARI<br> PRINCIPAL</b></p>
       </div>
       <div class="col-sm-3">
-        <div class="tab-title">
-          <ul class="clearfix">
-            <li>
-                <a href="about-us.html" class="active">About Us</a>
-            </li>
-            <li>
-                <a href="achievements.html" >Achievements</a>
-
-            </li>
-            <li>
-                <a href="javascript:avoid(0);">Academics</a>
-
-            </li>
-            <li>
-                <a href="facilities.html">Facilities</a>
-
-            </li>
-            <li>
-                <a href="gallery.html">Gallery</a>
-
-            </li>
-            <li>
-                <a href="pdf/prospectus.pdf" target="_blank">Prospectus</a>
-
-            </li>
-          </ul>
-        </div>
+        <%= render 'layouts/side_bar' %>
       </div>
     </div>
   </div>

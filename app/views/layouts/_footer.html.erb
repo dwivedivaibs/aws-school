@@ -29,13 +29,7 @@
         <div class="col-md-3">
           <div class="footer_box__block">
             <h4>Useful links</h4>
-            <ul>
-              <li><a href="about-us.html">About Us</a></li>
-              <li><a href="achievements.html">Achievements</a></li>
-              <li><a href="javascript:avoid(0);">Academics</a></li>
-              <li><a href="facilities.html">Facilities</a></li>
-              <li><a href="pdf/prospectus.pdf" target="_blank">Prospectus</a></li>
-            </ul>
+            <%= render 'layouts/side_bar' %>
           </div>
         </div>
         <div class="col-md-9">
@@ -64,5 +58,8 @@
     position: relative;
     z-index: 1;
     color: #fff;
+  }
+  .footer_box__block li::after{
+    top: 15px;
   }
 </style>

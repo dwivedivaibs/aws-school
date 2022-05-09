@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'welcome/principal_message'
   get 'welcome/mandatory_public_disclosure'
   get 'welcome/committee'
+  get 'welcome/committees'
   get 'welcome/pta'
   get 'welcome/faculty'
   get 'welcome/oasis_updated'

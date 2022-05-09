@@ -1,0 +1,40 @@
+<section class="inner-intro about-img light-color overlay-before parallax-background">
+  <div class="container">
+    <div class="row title">
+    </div>
+  </div>
+</section>
+<section class="padding ptb-xs-60">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="tab-content">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="heading-box pb-30">
+                <center><h2><span>OFFICIAL OF DIFFERENT </span>COMMITTEES AS PER CBSE RULES</h2></center>
+              </div>
+              <div>
+                <% @document = Document.find_by(name: "committee", is_active: true) %>
+                <% if @document && @document.file.url %>
+                  <iframe id="fred" style="border:1px solid #666CCC" title="PDF in an i-Frame" src="<%= asset_path(@document.file.url) %>" frameborder="1" scrolling="auto" height="700" width="100%" ></iframe>
+                  </object>
+                <% else %>
+                  <!-- <iframe id="fred" style="border:1px solid #666CCC" title="PDF in an i-Frame" src="https://school-erp.s3.amazonaws.com/PDFs/Affiliation_Letter.pdf" frameborder="1" scrolling="auto" height="700" width="100%" ></iframe> -->
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style type="text/css">
+  .about-img{
+    background: url("<%= asset_path('about1.jpg') %>") 0 20% no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+</style>

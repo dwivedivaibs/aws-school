@@ -13,10 +13,6 @@ class TcEntriesController < ApplicationController
     @tc_entry = TcEntry.first
     respond_to do |format|
       format.html
-      # format.pdf do
-      #   render template: "tc_entries/tc.pdf.erb",
-      #     pdf: "Posts:"
-      # end
     end
   end
 
@@ -24,10 +20,6 @@ class TcEntriesController < ApplicationController
     @tc_entry = TcEntry.find(params[:id])
     respond_to do |format|
       format.html
-      # format.pdf do
-      #   render template: "tc_entries/tc.pdf.erb",
-      #     pdf: "Posts:"
-      # end
     end
   end
 

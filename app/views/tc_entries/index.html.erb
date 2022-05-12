@@ -1,0 +1,74 @@
+<section class="inner-intro about-img light-color overlay-before parallax-background">
+  <div class="container">
+    <div class="row title">
+    </div>
+  </div>
+</section>
+<div id="about-section" class="padding pt-xs-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="heading-box pb-30">
+          <center><h2><span></span> Students' TC Data</h2></center>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+    	<div class="col-sm-12 pb-xs-30">
+				<%= form_tag tc_entries_path, method: :get do %>
+				  <label><h3>Search By TC No., Student Name, Father Name, Mother Name :</h3></label><br>
+				  <div class="row">
+				  	<div class="col-sm-10">
+				  		<%= text_field_tag :'query', nil, class: "form-control" %><br>
+				  	</div>
+				  	<div class="col-sm-2">
+				  		<%= submit_tag "Search", class: "btn btn-primary pull-right" %>
+				  	</div>
+				<% end %>
+				<br><br>
+				<br><br>
+				<table class="table table-bordered">
+				  <thead>
+				    <tr>
+				      <th scope="col">#</th>
+				      <th scope="col">TC No.</th>
+				      <th scope="col">Student Name</th>
+				      <th scope="col">Father Name</th>
+				      <th scope="col">Mother Name</th>
+				      <th scope="col">Actions</th>
+				    </tr>
+				  </thead>
+					<tbody>
+				  	<% if @tc_entries.present? %>
+					    <% @tc_entries.each_with_index do |tc_entry, index|%>
+					      <tr>
+					        <th scope="row"><%= index + 1 %></th>
+					        <td><%= tc_entry.tc_number %></td>
+					        <td><%= tc_entry.student_name %></td>
+					        <td><%= tc_entry.father_name %></td>
+					        <td><%= tc_entry.mother_name %></td>
+					        <td><%= link_to "Print", tc_entry_path(tc_entry), target: "_blank"%></td>
+					      </tr>
+					    <% end %>
+					 	<% else %>
+					 		<tr>
+					 			<td colspan="5"><center><h3>No TC present in system with this criteria. Please click <a href="<%= tc_entries_path %>">here</a> to go back to TC PAGE.</h3></center></td>
+					 		</tr>
+					</tbody>
+					 <% end %>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	table{
+		border: 1px solid #ccc !important;
+	}
+	.table > thead > tr > th{
+		color: #3a3434 !important;
+	}
+	.table a{
+		color: #3a3434 !important;
+	}
+</style>

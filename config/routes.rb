@@ -41,5 +41,11 @@ Rails.application.routes.draw do
   get 'welcome/contact_us'
   get 'welcome/feedback'
 
+  resources :tc_entries do 
+    collection do 
+      get :tc
+    end
+  end
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

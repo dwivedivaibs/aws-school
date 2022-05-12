@@ -1,0 +1,160 @@
+<br><br>
+<br>
+<header class="header__block">
+  <div class="middel-part__block ptb-20">
+    <div class="container" style="border: 2px solid #ccc;">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="logo">
+            <a href="#">
+              <%= image_tag('logo.png', alt:"Logo") %>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-8" style="margin: auto;">
+          <div class="top-info__block text-right">
+            <ul>
+              <li>
+                <i class="fa fa-map-marker"></i>
+                <p>NH-2, Malajani, Jaswant Nagar<br />Etawah (U.P.) 206245 </p>
+              </li>
+              <li>
+                <i class="fa fa-phone"></i>
+                <p> +91- 9871408181, 8395020203 <br />+91-8393020203</p>
+              </li>
+              <li>
+                <i class="fa fa-clock-o"></i>
+                <p>School Timing <span>8AM - 4PM</span></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header><br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-11">
+      <center>
+        <div class="row">
+          <div class="col-md-3">
+            <h6>SCHOOL CODE: 71480 &nbsp;&nbsp;&nbsp;&nbsp; AFFILIATION NO.: 2133211</h6>
+          </div>
+          <div class="col-md-6">
+            <h1 style="color: #FF9800"> ARISTOTLE WORLD SCHOOL</h1>
+          </div>
+          <div class="col-md-3">
+            <h6> CONTACT NO: +91- 9871408181, 8395020203</h6>
+          </div>
+        </div>
+        <br><br><br>
+        <h3>TRANSFER CERTIFICATE</h3>
+        <br><br>
+        <h3>TC No. / <%= @tc_entry.tc_number %></h3>
+      </center>
+    </div>
+    <div class="col-md-1">
+      <%= link_to "#", :onclick => 'window.print();return false;', class: 'btn btn-success pull-right' do %>
+        <i class="fa fa-print"></i>
+      <% end %>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="container tc_style">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="row pd-20">
+        <div class="col-sm-12"> <center><h2>TC Details</h2></center> </div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">1. छात्र का नाम/Student's Name : </div><div class="col-sm-3"><%= @tc_entry.student_name %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. पिता का नाम/Father's Name : </div><div class="col-sm-3"><%= @tc_entry.father_name %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. माता का नाम/Mother's Name : </div><div class="col-sm-3"><%= @tc_entry.mother_name %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. राष्ट्रीयता/Nationality : </div><div class="col-sm-3"><%= @tc_entry.nationality %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. क्या छात्र अनुसूचित जाति/अनुसूचित जनजाति/अन्य पिछड़ा वर्ग से संबंधित है? <br> Whether the student belongs to SC/ST/OBC Category? : </div><div class="col-sm-3"><%= @tc_entry.sc_st_obc?  ? "Yes" : "No" %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. प्रवेश रजिस्टर के अनुसार जन्म तिथि <br> Date of birth according to Addmission Register : </div><div class="col-sm-3"><%= time_format(@tc_entry.dob) %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. क्या छात्र का परीक्षा परिणाम फेल है? / wheather student is failed? : </div><div class="col-sm-3"><%= @tc_entry.result %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. प्रस्तावित विषय / Subject offered : </div><div class="col-sm-3"><%= @tc_entry.mother_name %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. पिछली काक्षा जिसमे छात्र अध्यनरत था / Class in which pupil was studied : </div><div class="col-sm-3"><%= @tc_entry.last_class %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. पिछला विद्यालय/बोर्ड परीक्षा और परिणाम <br> School/board annual examination last taken with result : </div><div class="col-sm-3"><%= @tc_entry.last_class_result %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. क्या अगली उच्च कक्षा में पदोन्नति के लिए योग्य है? <br> Whether qualified for promotion to the next higher class? : </div><div class="col-sm-3"><%= @tc_entry.qualified_for_promotion?  ? "Yes" : "No" %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. क्या छात्र ने स्कूल के सभी बकाया का भुगतान किया है <br> Whether the pupil has paid all dues to  school : </div><div class="col-sm-3"><%= @tc_entry.dues_paid?  ? "Yes" : "No" %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. क्या छात्र एनसीसी कैडेट/स्काउट है? <br> Whether the pupil is NCC cadet/boy scout/girl? : </div><div class="col-sm-3"><%= @tc_entry.ncc_cadets?  ? "Yes" : "No"%></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. विद्यालय में छात्र के नाम काटे जाने की तिथि <br> Date on which pupil name was struck off the rolls to the school : </div><div class="col-sm-3"><%= time_format(@tc_entry.last_day_school) %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. विद्यालय छोड़ने का कारण/ Reason for leaving the vidhyalay : </div><div class="col-sm-3"><%= @tc_entry.leaving_reason %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. आज तक की उपस्थिति की संख्या / No. of meeting up to date : </div><div class="col-sm-3"><%= @tc_entry.total_meeting_attendance %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. विद्यार्थी के विद्यालय दिवसों की कुल संख्या <br> No. of school days the pupil attended  : </div><div class="col-sm-3"><%= @tc_entry.total_attendance %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. सामान्य आचरण/ General Conduct : </div><div class="col-sm-3"><%= @tc_entry.general_conduct %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. क्या स्कूल सरकार/अल्पसंख्यक/स्वतंत्र श्रेणी के अंतर्गत है? <br> whether school is under govt./minority/Independent category? : </div><div class="col-sm-3"><%= @tc_entry.category %></div>
+      </div>
+      <div class="row pd-20">
+        <div class="col-sm-9">2. प्रमाण पत्र जारी करने की तिथि/ Date of issue of certificate : </div><div class="col-sm-3"><%= time_format(@tc_entry.certificate_issue_date) %></div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<style type="text/css">
+  hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 2px solid rgb(118 100 100 / 60%);
+  }
+  .tc_style{
+    padding: 20px;
+    border: 2px solid #ccc;
+    font-size: 20px;
+  }
+  .pd-20{
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  a{
+    text-decoration: none !important;
+    color: #fff !important;
+  }
+  .fa-print{
+    font-size: 30px;
+    padding: 10px;
+  }
+</style>

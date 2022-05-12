@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_22_065333) do
+ActiveRecord::Schema.define(version: 2022_05_09_074948) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -67,6 +67,32 @@ ActiveRecord::Schema.define(version: 2022_04_22_065333) do
   create_table "gallery_videos", force: :cascade do |t|
     t.string "video"
     t.boolean "is_active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tc_entries", force: :cascade do |t|
+    t.string "tc_number"
+    t.string "student_name"
+    t.string "father_name"
+    t.string "mother_name"
+    t.string "nationality"
+    t.boolean "sc_st_obc"
+    t.datetime "dob"
+    t.string "result"
+    t.string "subjects"
+    t.string "last_class"
+    t.string "last_class_result"
+    t.boolean "qualified_for_promotion"
+    t.boolean "dues_paid"
+    t.boolean "ncc_cadets"
+    t.datetime "last_day_school"
+    t.string "leaving_reason"
+    t.string "total_meeting_attendance"
+    t.string "total_attendance"
+    t.string "general_conduct"
+    t.string "category"
+    t.datetime "certificate_issue_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

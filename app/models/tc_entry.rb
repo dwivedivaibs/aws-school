@@ -1,0 +1,2 @@
+class TcEntry < ApplicationRecord
+end

@@ -52,4 +52,8 @@ class WelcomeController < ApplicationController
   def contact
     
   end
+
+  def academic_calendar
+    
+  end
 end

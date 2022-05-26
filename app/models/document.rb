@@ -13,6 +13,7 @@ class Document < ApplicationRecord
     ["Building safety certificate", "building_safety_certificate"],
     ["Fire safety certificate", "fire_safety_certificate"],
     ["DEO Certificate for Affiliation", "deo_certificate"],
+    ["Public Disclosure", "public_disclosure"],
     ["Water sanitation certificate", "water_sanitation_certificate"],
     ["Academic calendar", "academic_calendar"],
     ["Book List with Declaration", "book_list"],

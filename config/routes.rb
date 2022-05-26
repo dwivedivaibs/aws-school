@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'welcome/oasis_updated'
   get 'welcome/result_date_sheet'
   get 'welcome/admission_procedure'
+  get 'welcome/public_disclosure'
   get 'welcome/prospectus'
   get 'welcome/noc'
   get 'welcome/recognition'

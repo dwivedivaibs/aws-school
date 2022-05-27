@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'welcome/result_date_sheet'
   get 'welcome/admission_procedure'
   get 'welcome/public_disclosure'
+  get 'welcome/deo_certificate'
   get 'welcome/prospectus'
   get 'welcome/noc'
   get 'welcome/recognition'

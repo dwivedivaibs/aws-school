@@ -1,5 +1,5 @@
 # Change these
-server '52.23.172.141', port: 22, roles: [:web, :app, :db], primary: true
+server '54.147.178.252', port: 22, roles: [:web, :app, :db], primary: true
 
 set :repo_url,'git@github.com:dwivedivaibs/aws-school.git'
 set :application,     'aws-school'

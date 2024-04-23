@@ -84,4 +84,6 @@ gem 'aws-sdk-rails'
 gem 'figaro'
 
 gem 'ckeditor', '4.2.4'
+gem "roo"
+
 

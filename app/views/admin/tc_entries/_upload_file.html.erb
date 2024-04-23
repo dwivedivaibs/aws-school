@@ -1,0 +1,6 @@
+<%= semantic_form_for :file, url: admin_upload_tc_entries_path, multipart: true do |f| %>
+  <%= f.input :file, as: :file %>
+  <%= f.actions do %>
+    <%= f.action :submit, label: 'Upload' %>
+  <% end %>
+<% end %>

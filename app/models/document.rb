@@ -22,7 +22,8 @@ class Document < ApplicationRecord
     ["School committees stracture", "committee_stracture"],
     ["Norms of fixing fee", "norms_of_fixing_fee"],
     ["PROSPECTUS", "prospectus"],
-    ["Student Details", "student_details"]
+    ["Student Details", "student_details"],
+    ["Transfer Certificate", "transfer_certificate"]
   ]
 
   validates :name, presence: true

@@ -22,7 +22,6 @@ ActiveAdmin.register TcEntry do
       # Iterate over each row (excluding header)
       (2..excel.last_row).each do |i|
         row = Hash[[headers, excel.row(i)].transpose]
-        debugger
         tc_entry = TcEntry.find_or_initialize_by(tc_number: row['tc_number'])
         tc_entry.attributes = row
         tc_entry.save

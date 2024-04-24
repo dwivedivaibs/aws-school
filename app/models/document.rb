@@ -23,7 +23,11 @@ class Document < ApplicationRecord
     ["Norms of fixing fee", "norms_of_fixing_fee"],
     ["PROSPECTUS", "prospectus"],
     ["Student Details", "student_details"],
-    ["Transfer Certificate", "transfer_certificate"]
+    ["Transfer Certificate", "transfer_certificate"],
+    ["Syllabus", "syllabus"],
+    ["Datesheet", "datesheet"],
+    ["10th Results", "tenth_results"],
+    ["12th Results", "twelfth_results"]
   ]
 
   validates :name, presence: true

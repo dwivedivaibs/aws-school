@@ -66,11 +66,31 @@ ActiveAdmin.register TcEntry do
   # end
 
   #form
-  # form do |f|
-  #   f.inputs do
-  #     f.input :content_type, :label => 'Select Content Type', :as => :select, :collection => Content::CONTENT_TYPES
-  #     f.input :description, as: :ckeditor, :input_html => { :class => "ckeditor" }
-  #   end
-  #   f.actions
-  # end
+  form do |f|
+    f.inputs "Student Details" do
+      f.input :tc_number
+      f.input :student_name
+      f.input :father_name
+      f.input :mother_name
+      f.input :nationality
+      f.input :sc_st_obc
+      f.input :dob, as: :date_select, start_year: 1900, end_year: Date.today.year
+      f.input :result
+      f.input :subjects
+      f.input :last_class
+      f.input :last_class_result
+      f.input :qualified_for_promotion
+      f.input :dues_paid
+      f.input :ncc_cadets
+      f.input :last_day_school
+      f.input :leaving_reason
+      f.input :total_meeting_attendance
+      f.input :total_attendance
+      f.input :general_conduct
+      f.input :category
+      f.input :certificate_issue_date, as: :date_select, start_year: 1900, end_year: Date.today.year
+      f.input :file, as: :file
+    end
+    f.actions
+  end
 end

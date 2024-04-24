@@ -45,6 +45,9 @@ Rails.application.routes.draw do
   get 'welcome/videos'
   get 'welcome/contact_us'
   get 'welcome/feedback'
+  get 'welcome/syllabus'
+  get 'welcome/datesheet'
+  get 'welcome/results'
 
   resources :tc_entries do 
     collection do 

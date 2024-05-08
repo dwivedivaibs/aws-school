@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'welcome/committees'
   get 'welcome/pta'
   get 'welcome/faculty'
+  get 'welcome/facility'
   get 'welcome/oasis_updated'
   get 'welcome/result_date_sheet'
   get 'welcome/admission_procedure'

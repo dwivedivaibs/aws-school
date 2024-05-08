@@ -26,6 +26,10 @@ class WelcomeController < ApplicationController
   def gallery
   	@photos = GalleryImage.active.where(section: 'photo_gallery')
   end
+
+  def facility
+    @photos = GalleryImage.all
+  end
   
   def about_us
   	@about_us = Content.where(content_type: 'about_us').last

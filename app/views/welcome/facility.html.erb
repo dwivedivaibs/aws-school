@@ -1,0 +1,362 @@
+<section class="inner-intro mission-img light-color overlay-before parallax-background">
+<div class="container">
+  <div class="row title">
+  </div>
+</div>
+</section>
+<div id="about-section" class="padding pt-xs-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="heading-box pb-30">
+          <h2 style="font-size:20px;"><span>Aristotle World School</span> Facilities</h2>
+          <ol>
+            <li>Air conditioned classroom</li>
+            <li>Smart classes</li>
+            <li>Sports Area</li>
+            <li>High class infrastructure</li>
+            <li>IT Lab</li>
+            <li>Science Lab</li>
+            <li>Physics Lab</li>
+            <li>Chemistry lab</li>
+            <li>Indoor outdoor Play Arena</li>
+            <li>Huge Library</li>
+            <li>CCTV surveillance in and out of campus</li>
+            <li>Hostel And Mess availability.</li>
+          </ol> 
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">Air conditioned classroom</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'ac_classroom').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">Smart classes</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'smart_class').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">Sports Area</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'sports_area').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">High class infrastructure</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'infrastructure').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">IT Lab</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'it_lab').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">Science Lab</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'laboratory_photo').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">Physics Lab</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'laboratory_photo').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">Chemistry lab</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'laboratory_photo').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">Indoor outdoor Play Arena</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'play_arena').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">Huge Library</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'library_photo').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">CCTV surveillance in and out of campus</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'cctv').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row pb-30">
+        <div class="col-sm-12 mb-20">
+          <h2 style="font-size:20px;">Hostel And Mess availability.</h2>
+          <span class="b-line" style="position: absolute;"></span>
+        </div>
+      </div>
+      <div class="row container-masonry nf-col-3">
+        <div class="nf-item branding coffee spacing">
+        </div>
+        <div class="row">
+          <% @photos.where(section: 'hostel_and_mess').each do |photo|%>
+            <div class="col-md-4 nf-item grid-sizer photo spacing">
+              <div class="item-box">
+                <a> 
+                  <%= image_tag(photo.image.url, class: "item-container") %>
+                </a>
+                <div class="link-zoom">
+                  <a href="<%= photo.image.url %>" class="fancylight popup-btn" data-fancybox-group="light"> <i class="fa fa-search-plus"></i> </a>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<style type="text/css">
+  .mission-img{
+    background: url("<%= asset_path('mission1.jpg') %>") 0 20% no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+  }
+</style>

@@ -27,7 +27,8 @@ class Document < ApplicationRecord
     ["Syllabus", "syllabus"],
     ["Datesheet", "datesheet"],
     ["10th Results", "tenth_results"],
-    ["12th Results", "twelfth_results"]
+    ["12th Results", "twelfth_results"],
+    ["Summer Holiday Homework", "summer_homework"]
   ]
 
   validates :name, presence: true

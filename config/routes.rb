@@ -29,6 +29,7 @@ Rails.application.routes.draw do
   get 'welcome/water_certificate'
   get 'welcome/affiliation_letter'
   get 'welcome/fire_safety'
+  get 'welcome/summer_homework'
   get 'welcome/building_safety_certificate'
 
   get 'welcome/fee_stracture'

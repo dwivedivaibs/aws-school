@@ -4,6 +4,7 @@
     </div>
   </div>
 </section>
+
 <section class="padding ptb-xs-60">
   <div class="container-fluid">
     <div class="row">
@@ -11,17 +12,47 @@
         <div class="tab-content">
           <div class="row">
             <div class="col-sm-12">
-              <div class="heading-box pb-30">
-                <center><h2><span>Summer Holiday</span> Homework</h2></center>
-              </div>
-              <div>
-                <% @document = Document.find_by(name: "summer_homework", is_active: true) %>
-                <% if @document && @document.file.url %>
-                  <iframe id="fred" style="border:1px solid #666CCC" title="PDF in an i-Frame" src="<%= asset_path(@document.file.url) %>" frameborder="1" scrolling="auto" height="700" width="100%" ></iframe>
-                  </object>
-                <% else %>
-                <% end %>
-                <!-- <object data="/assets/Affiliation_Letter.pdf" type="application/pdf" width="100%" height="700"></object> -->
+              <div class="container py-20">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div id="homepage-tiles-inner">
+                      <div class="inner">
+                        <div id="promo-tile-large-inner">
+                          <div class="inner-page-content">
+                            <div>
+                              <div id="tg-content" class="tg-content">
+                                <div class="tg-aboutus tg-Objectives">
+                                  <div class="">
+                                    <h2 class="section-heading"><i class="fa fa-book" aria-hidden="true"></i> SUMMER HOMEWORK CLASSWISE LIST :</h2>
+                                    <div style="overflow-x: auto;">
+                                      <table class="table table-bordered">
+                                        <thead>
+                                          <tr>
+                                            <th style="color:#323232">Class Name</th>
+                                            <th style="color:#323232">Homework Link</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <% summer_docs = SummerHomework.all %>
+                                          <% summer_docs.each do |doc| %>
+                                            <tr>
+                                              <td><%= doc.class_name %></td>
+                                              <td><%= link_to "Click", doc.homework_doc.url, target: "_blank" %></td>
+                                            </tr>
+                                          <% end %>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -36,5 +67,15 @@
     background: url("<%= asset_path('about1.jpg') %>") 0 20% no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
+  }
+  a{
+    color: #323232;
+  }
+  a:hover, a:focus {
+    color: #323232;
+    text-decoration: underline;
+  }
+  .table > tbody > tr > td, .table > tbody > tr > th{
+    border-bottom: 1px solid #ccc;
   }
 </style>

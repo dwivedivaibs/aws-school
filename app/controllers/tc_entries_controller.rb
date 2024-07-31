@@ -55,7 +55,7 @@ class TcEntriesController < ApplicationController
 
   def resolve_layout
     case action_name
-    when "show"
+    when "tc"
       "pdf"
     else
       "application"

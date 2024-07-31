@@ -52,7 +52,7 @@ Rails.application.routes.draw do
   get 'welcome/results'
 
   resources :tc_entries do 
-    collection do 
+    member do 
       get :tc
     end
   end

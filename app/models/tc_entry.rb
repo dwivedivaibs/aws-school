@@ -1,3 +1,3 @@
 class TcEntry < ApplicationRecord
-	mount_uploader :file, TcEntryUploader
+	# mount_uploader :file, TcEntryUploader
 end

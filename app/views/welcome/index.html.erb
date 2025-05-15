@@ -251,11 +251,11 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-md-3 counter-section__box">
-          <span class="counter" data-count="30"><%= strip_tags(@teacher_count.presence || 30) %></span>
+          <span class="counter" data-count="30"><%= strip_tags(@teacher_count.presence || "30") %></span>
           <p>professional teacher</p>
         </div>
         <div class="col-sm-6 col-md-3 counter-section__box">
-          <span class="counter" data-count="455"><%= strip_tags(@student_count.presence || 455) %></span>
+          <span class="counter" data-count="455"><%= strip_tags(@student_count.presence || "455") %></span>
           <p>Students</p>
         </div>
         <div class="col-sm-6 col-md-3 counter-section__box">
@@ -263,7 +263,7 @@
           <p>Branches</p>
         </div>
         <div class="col-sm-6 col-md-3 counter-section__box">
-          <span class="counter" data-count="55"><%= strip_tags(@room_count.presence || 55) %></span>
+          <span class="counter" data-count="55"><%= strip_tags(@room_count.presence || "55") %></span>
           <p>Rooms</p>
         </div>
       </div>

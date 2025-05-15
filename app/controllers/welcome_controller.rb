@@ -12,9 +12,9 @@ class WelcomeController < ApplicationController
     @facilities = Content.where(content_type: 'facilities').last
     @welcome_section = Content.where(content_type: 'welcome_section').last
     @salient_features = Content.where(content_type: 'salient_features').last
-    @teacher_count = Content.where(content_type: 'teacher_count').last&.discription
-    @student_count = Content.where(content_type: 'student_count').last&.discription
-    @room_count = Content.where(content_type: 'room_count').last&.discription
+    @teacher_count = Content.where(content_type: 'teacher_count').last&.description
+    @student_count = Content.where(content_type: 'student_count').last&.description
+    @room_count = Content.where(content_type: 'room_count').last&.description
     @president_message = Content.where(content_type: 'president_message').last
     @director_message = Content.where(content_type: 'director_message').last
     @principal_message = Content.where(content_type: 'principal_message').last

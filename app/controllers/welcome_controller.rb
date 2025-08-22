@@ -46,6 +46,9 @@ class WelcomeController < ApplicationController
   	@principal_message = Content.where(content_type: 'principal_message').last
   end
 
+  def inclusion_policy
+  end
+
   def director
     @director_message = Content.where(content_type: 'director_message').last
   end

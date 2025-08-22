@@ -50,6 +50,7 @@ Rails.application.routes.draw do
   get 'welcome/syllabus'
   get 'welcome/datesheet'
   get 'welcome/results'
+  get 'welcome/inclusion_policy'
 
   resources :tc_entries do 
     member do 

@@ -274,27 +274,7 @@
       <div class="row pb-30">
       </div>
       <div class="row">
-        <div class="col-sm-4">
-          <div class="single_plan__block single_plan__block-img block_bg6 block_bg6 matchHeigh">
-            <div class="plan-content-box plan-content-box__white__bg">
-              <h3>President's Message</h3>
-              <% if @manager_photo.present? %>
-                <%= image_tag(@manager_photo.image.url, alt:"president", style: "width: 185px;margin-right: 10px;float:left;") %>
-              <% else %>
-                <%= image_tag('president.jpg', alt:"president", style: "width: 185px;margin-right: 10px;float:left;") %>
-              <% end %>
-              <% if @president_message.present? %>
-                <p><%= raw @president_message.description %></p>
-              <% else %>
-                <p style="text-align:justify;">"Welcome to The Aristotle World School.<br />Since its inception, Aristotle World School has expanded opportunities for high school and middle school students through innovative programs that prepare them for college and beyond.To prepare educators with the technological skills necessary to enhance learning experiences both online and in the classroom."
-                </p>
-              <% end %>
-              <h4 style="margin-bottom:0px !important">NIKHIL YADAV</h4>
-              <a href="<%= welcome_chairman_message_path %>" class="more_btn__block pull-right" style="margin-top: 0px;">More <i class="fa fa-angle-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="single_plan__block single_plan__block-img block_bg6 block_bg6 matchHeigh">
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>Director's Message</h3>
@@ -313,7 +293,7 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-6">
           <div class="single_plan__block single_plan__block-img block_bg6 block_bg6 matchHeigh">
             <div class="plan-content-box plan-content-box__white__bg">
               <h3>Principal's Message</h3>

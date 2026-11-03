@@ -4,6 +4,10 @@ server '69.62.77.209', port: 22, roles: [:web, :app, :db], primary: true
 set :repo_url,'git@github.com:dwivedivaibs/aws-school.git'
 set :application,     'aws-school'
 set :user,            'ubuntu'
+# RVM settings (system-wide install at /usr/local/rvm, ruby-2.6.3 already present)
+set :rvm_type,         :system
+set :rvm_path,         '/usr/local/rvm'
+set :rvm_ruby_version, '2.6.3'
 set :branch,          'main'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0

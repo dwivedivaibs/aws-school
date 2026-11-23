@@ -80,12 +80,13 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="javascript:avoid(0);">Achievements</a> <span class="submenu-button"></span>
-                  <!--<ul class="dropdown-menu">
-                    <li> <a href="#">Admission Procedure</a> </li>
-                    <li> <a href="#">Fee Structure</a> </li>
-                    <li> <a href="#">Online Admission</a> </li>
-                    </ul>-->
+                  <a href="<%= achievements_path %>">Achievements</a> <span class="submenu-button"></span>
+                  <ul class="dropdown-menu">
+                    <li><a href="<%= achievements_path %>">All Achievements</a></li>
+                    <% Achievement::CATEGORIES.each do |label, key| %>
+                      <li><a href="<%= category_achievements_path(key) %>"><%= label %></a></li>
+                    <% end %>
+                  </ul>
                 </li>
                 <li>
                   <a href="javascript:avoid(0);">Academics</a> <span class="submenu-button"></span>

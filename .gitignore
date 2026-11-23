@@ -28,3 +28,6 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# Files uploaded through the admin (kept in the shared folder on the server, not in git)
+/public/uploads

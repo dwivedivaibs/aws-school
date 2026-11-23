@@ -1,0 +1,293 @@
+// Student Achievements pages (public). Everything is scoped under .ach-* classes.
+$ach-green: #67973b;
+$ach-green-dark: #4f7a2b;
+$ach-orange: #f89f58;
+$ach-dark: #314555;
+$ach-text: #555f69;
+$ach-muted: #7a8590;
+$ach-border: #e3e6e9;
+
+// ---- Banner: photo strip with green title bar ----
+.ach-hero {
+  position: relative;
+  height: 300px;
+  background: image-url('about1.jpg') center 35% no-repeat;
+  background-size: cover;
+}
+.ach-hero-bar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $ach-green;
+  padding: 10px 0 12px;
+  h1 {
+    margin: 0;
+    color: #fff;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: none;
+    letter-spacing: .3px;
+  }
+}
+
+.ach-page {
+  padding: 40px 0 70px;
+  background: #f8f8f8;
+  color: $ach-text;
+  a { color: $ach-green; }
+}
+
+// ---- Category tabs + session select ----
+.ach-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+.ach-tabs {
+  list-style: none !important;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  li a {
+    display: inline-block;
+    padding: 7px 16px;
+    border-radius: 20px;
+    background: #fff;
+    border: 1px solid $ach-border;
+    color: $ach-dark !important;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none !important;
+  }
+  li a:hover { border-color: $ach-green; color: $ach-green !important; }
+  li.active a { background: $ach-green; border-color: $ach-green; color: #fff !important; }
+}
+.ach-session .form-control { min-width: 170px; height: 38px; }
+
+// ---- One achievement: text on one side, photo(s) on the other ----
+.ach-story {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 45px 0;
+  border-bottom: 1px solid $ach-border;
+  scroll-margin-top: 120px;
+  &:last-of-type { border-bottom: 0; }
+
+  // Odd rows: text first, photo on the right (alternating like the DPS pages)
+  &.ach-story-reverse .ach-story-media { order: 2; }
+}
+.ach-story-media {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+.ach-story-img {
+  display: block;
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, .10);
+}
+.ach-story-text {
+  flex: 1;
+  min-width: 0;
+  h3 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #3b3b3b;
+    line-height: 1.35;
+  }
+}
+.ach-story-textonly .ach-story-text { max-width: 900px; }
+
+.ach-story-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.ach-pill {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: $ach-green;
+}
+.ach-pill-light { background: #eaf1e3; color: $ach-green-dark; }
+.ach-medal-gold { background: #c9971c; }
+.ach-medal-silver { background: #8a949e; }
+.ach-medal-bronze { background: #a8652e; }
+.ach-medal-merit { background: $ach-green; }
+.ach-medal-special { background: $ach-dark; }
+.ach-medal-participation { background: #7a8a99; }
+.ach-date { font-size: 13px; color: $ach-muted; }
+
+.ach-story-body {
+  font-size: 16px;
+  line-height: 2;
+  text-align: justify;
+  color: $ach-text;
+  p { margin: 0 0 14px; }
+  ul, ol { padding-left: 20px; margin-bottom: 14px; }
+  img { max-width: 100%; height: auto; }
+}
+.ach-story-score {
+  font-size: 26px;
+  font-weight: 800;
+  color: $ach-green;
+  margin: 0 0 10px;
+}
+
+.ach-story-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 8px;
+}
+.ach-achiever {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: $ach-dark !important;
+  font-size: 14px;
+  text-decoration: none !important;
+  img, > span {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  > span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: $ach-green;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+  }
+}
+a.ach-achiever:hover strong { color: $ach-green; }
+.ach-cert {
+  font-weight: 600;
+  font-size: 14px;
+  border: 1px solid $ach-green;
+  border-radius: 4px;
+  padding: 6px 12px;
+  text-decoration: none !important;
+  &:hover { background: $ach-green; color: #fff !important; }
+}
+
+// ---- Photo slider (Bootstrap 3 carousel) ----
+.ach-carousel {
+  position: relative;
+  .item .ach-story-img { height: 440px; }
+}
+.ach-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: #333 !important;
+  font-size: 26px;
+  line-height: 42px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .25);
+  text-decoration: none !important;
+  z-index: 5;
+  &:hover { background: $ach-green; color: #fff !important; }
+}
+.ach-carousel-prev { left: -22px; }
+.ach-carousel-next { right: -22px; }
+
+// ---- Pagination / empty state ----
+.ach-pagination {
+  margin-top: 30px;
+  text-align: center;
+  .pagination { display: inline-flex; gap: 6px; margin: 0; }
+  .page, .next, .prev, .first, .last {
+    a, &.current { display: inline-block; padding: 6px 12px; border-radius: 6px; background: #fff; border: 1px solid $ach-border; }
+    &.current { background: $ach-green; color: #fff; border-color: $ach-green; }
+  }
+}
+.ach-empty {
+  text-align: center;
+  padding: 60px 20px;
+  color: $ach-muted;
+  background: #fff;
+  border-radius: 8px;
+  i { font-size: 48px; color: $ach-border; display: block; margin-bottom: 10px; }
+  p { font-size: 16px; }
+}
+
+// ---- Student profile page ----
+.ach-back { font-weight: 600; }
+.ach-profile {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, .07);
+  margin-bottom: 10px;
+  h2 { margin: 0 0 4px; font-weight: 800; color: $ach-dark; }
+}
+.ach-meta { color: $ach-muted; font-size: 14px; margin-bottom: 6px; }
+.ach-profile-photo {
+  flex: 0 0 150px;
+  img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid $ach-green; }
+}
+.ach-initials {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: $ach-green;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ach-profile-count { color: $ach-orange; font-weight: 700; font-size: 16px; margin-top: 8px; }
+
+// ---- Mobile: photo on top, text below ----
+@media (max-width: 991px) {
+  .ach-story {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+    padding: 30px 0;
+    &.ach-story-reverse .ach-story-media { order: 0; }
+  }
+  .ach-story-media { flex: none; max-width: 100%; }
+  .ach-carousel .item .ach-story-img { height: 300px; }
+  .ach-carousel-prev { left: 8px; }
+  .ach-carousel-next { right: 8px; }
+  .ach-story-body { text-align: left; line-height: 1.8; }
+}
+@media (max-width: 767px) {
+  .ach-hero { height: 200px; }
+  .ach-hero-bar h1 { font-size: 28px; }
+  .ach-profile { flex-direction: column; text-align: center; }
+  .ach-toolbar { flex-direction: column; align-items: stretch; }
+  .ach-session .form-control { width: 100%; }
+}

@@ -1,0 +1,17 @@
+<% urls = achievement.photo_urls %>
+<% if urls.size == 1 %>
+  <a href="<%= urls.first %>" target="_blank" rel="noopener"><%= image_tag urls.first, alt: achievement.title, class: "ach-story-img", loading: "lazy" %></a>
+<% elsif urls.size > 1 %>
+  <% cid = "ach-carousel-#{achievement.id}" %>
+  <div id="<%= cid %>" class="carousel slide ach-carousel" data-ride="carousel" data-interval="4000">
+    <div class="carousel-inner" role="listbox">
+      <% urls.each_with_index do |url, i| %>
+        <div class="item <%= 'active' if i.zero? %>">
+          <a href="<%= url %>" target="_blank" rel="noopener"><%= image_tag url, alt: "#{achievement.title} photo #{i + 1}", class: "ach-story-img" %></a>
+        </div>
+      <% end %>
+    </div>
+    <a class="ach-carousel-btn ach-carousel-prev" href="#<%= cid %>" role="button" data-slide="prev" aria-label="Previous photo"><i class="fa fa-angle-left"></i></a>
+    <a class="ach-carousel-btn ach-carousel-next" href="#<%= cid %>" role="button" data-slide="next" aria-label="Next photo"><i class="fa fa-angle-right"></i></a>
+  </div>
+<% end %>

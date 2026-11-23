@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_09_074948) do
+ActiveRecord::Schema.define(version: 2026_11_23_080000) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "achievement_images", force: :cascade do |t|
+    t.bigint "achievement_id", null: false
+    t.string "image"
+    t.integer "position", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["achievement_id"], name: "index_achievement_images_on_achievement_id"
+  end
+
+  create_table "achievements", force: :cascade do |t|
+    t.bigint "student_id"
+    t.string "team_name"
+    t.string "title", null: false
+    t.string "category", null: false
+    t.string "level"
+    t.string "position"
+    t.string "score"
+    t.date "event_date"
+    t.string "academic_session"
+    t.text "description"
+    t.string "certificate"
+    t.string "event_photo"
+    t.boolean "is_featured", default: false
+    t.boolean "is_active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["academic_session"], name: "index_achievements_on_academic_session"
+    t.index ["category"], name: "index_achievements_on_category"
+    t.index ["student_id"], name: "index_achievements_on_student_id"
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -71,6 +102,30 @@ ActiveRecord::Schema.define(version: 2022_05_09_074948) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "students", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "admission_no"
+    t.string "student_class"
+    t.string "section"
+    t.string "house"
+    t.string "photo"
+    t.boolean "is_alumni", default: false
+    t.string "passing_year"
+    t.text "bio"
+    t.boolean "is_active", default: true
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["admission_no"], name: "index_students_on_admission_no"
+    t.index ["name"], name: "index_students_on_name"
+  end
+
+  create_table "summer_homeworks", force: :cascade do |t|
+    t.string "class_name"
+    t.string "homework_doc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "tc_entries", force: :cascade do |t|
     t.string "tc_number"
     t.string "student_name"
@@ -97,4 +152,6 @@ ActiveRecord::Schema.define(version: 2022_05_09_074948) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "achievement_images", "achievements"
+  add_foreign_key "achievements", "students"
 end

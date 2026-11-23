@@ -1,0 +1,40 @@
+<% a = achievement; s = a.student; has_photos = a.photo_urls.any? %>
+<article id="achievement-<%= a.id %>" class="ach-story <%= 'ach-story-reverse' if reverse %> <%= 'ach-story-textonly' unless has_photos %>">
+  <% if has_photos %>
+    <div class="ach-story-media"><%= render "achievements/photos", achievement: a %></div>
+  <% end %>
+  <div class="ach-story-text">
+    <h3><%= a.title %></h3>
+
+    <div class="ach-story-meta">
+      <% if a.position.present? %><span class="ach-pill ach-medal-<%= a.position %>"><i class="fa fa-trophy"></i> <%= a.position_label %></span><% end %>
+      <% if a.level.present? %><span class="ach-pill ach-pill-light"><%= a.level_label %> Level</span><% end %>
+      <% if show_category %><span class="ach-pill ach-pill-light"><%= a.category_label.to_s.sub(' Achievements', '') %></span><% end %>
+      <span class="ach-date"><i class="fa fa-calendar"></i> <%= a.event_date ? a.event_date.strftime('%d %B %Y') : "Session #{a.academic_session}" %></span>
+    </div>
+
+    <div class="ach-story-body">
+      <% if a.description.present? %>
+        <%= sanitize a.description %>
+      <% elsif a.auto_summary %>
+        <p><%= a.auto_summary %></p>
+      <% end %>
+    </div>
+
+    <% if a.score.present? %><p class="ach-story-score"><%= a.score %></p><% end %>
+
+    <div class="ach-story-foot">
+      <% if s %>
+        <%= link_to achievement_student_path(s), class: "ach-achiever" do %>
+          <% if s.photo.url.present? %><%= image_tag s.photo.url, alt: "" %><% else %><span><%= s.initials %></span><% end %>
+          <strong><%= s.name %></strong><% if s.class_label %> &middot; <%= s.class_label %><% end %>
+        <% end %>
+      <% elsif a.team_name.present? %>
+        <span class="ach-achiever"><span><i class="fa fa-users"></i></span><strong><%= a.team_name %></strong></span>
+      <% end %>
+      <% if a.certificate.url.present? %>
+        <%= link_to a.certificate.url, target: "_blank", rel: "noopener", class: "ach-cert" do %><i class="fa fa-certificate"></i> View Certificate<% end %>
+      <% end %>
+    </div>
+  </div>
+</article>

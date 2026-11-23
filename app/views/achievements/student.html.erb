@@ -1,0 +1,34 @@
+<%= render "achievements/banner", title: "Achiever Profile" %>
+
+<section class="ach-page">
+  <div class="container">
+    <p><%= link_to achievements_path, class: "ach-back" do %><i class="fa fa-arrow-left"></i> All Achievements<% end %></p>
+
+    <div class="ach-profile">
+      <div class="ach-profile-photo">
+        <% if @student.photo.url.present? %>
+          <%= image_tag @student.photo.url, alt: @student.name %>
+        <% else %>
+          <span class="ach-initials"><%= @student.initials %></span>
+        <% end %>
+      </div>
+      <div>
+        <h2><%= @student.name %></h2>
+        <div class="ach-meta">
+          <%= @student.class_label %>
+          <% if @student.house.present? %> &middot; <%= @student.house %> House<% end %>
+        </div>
+        <% if @student.bio.present? %><p><%= @student.bio %></p><% end %>
+        <div class="ach-profile-count"><i class="fa fa-trophy"></i> <%= pluralize(@achievements.size, "Achievement") %></div>
+      </div>
+    </div>
+
+    <% if @achievements.any? %>
+      <% @achievements.each_with_index do |a, i| %>
+        <%= render "achievements/story", achievement: a, reverse: i.odd?, show_category: true %>
+      <% end %>
+    <% else %>
+      <div class="ach-empty"><i class="fa fa-trophy"></i><p>No achievements published yet.</p></div>
+    <% end %>
+  </div>
+</section>

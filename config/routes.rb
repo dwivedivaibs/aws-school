@@ -52,6 +52,11 @@ Rails.application.routes.draw do
   get 'welcome/results'
   get 'welcome/inclusion_policy'
 
+  get 'achievements', to: 'achievements#index', as: :achievements
+  get 'achievements/students/:id', to: 'achievements#student', as: :achievement_student
+  get 'achievements/:category', to: 'achievements#index', as: :category_achievements,
+      constraints: { category: /academic|sports|art_craft|literary|music_dance|alumni/ }
+
   resources :tc_entries do 
     member do 
       get :tc

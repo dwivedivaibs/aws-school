@@ -1,0 +1,32 @@
+<%= render "achievements/banner", title: @title %>
+
+<section class="ach-page">
+  <div class="container">
+    <div class="ach-toolbar">
+      <ul class="ach-tabs">
+        <li class="<%= 'active' unless @category %>"><%= link_to "All", achievements_path %></li>
+        <% Achievement::CATEGORIES.each do |label, key| %>
+          <li class="<%= 'active' if @category == key %>"><%= link_to label.sub(' Achievements', ''), category_achievements_path(key) %></li>
+        <% end %>
+      </ul>
+      <% if @sessions.size > 1 %>
+        <%= form_tag request.path, method: :get, class: "ach-session", enforce_utf8: false do %>
+          <%= select_tag :session, options_for_select(@sessions, @session), prompt: "All Sessions", class: "form-control", onchange: "this.form.submit()", "aria-label": "Academic session" %>
+          <noscript><button type="submit">Go</button></noscript>
+        <% end %>
+      <% end %>
+    </div>
+
+    <% if @achievements.any? %>
+      <% @achievements.each_with_index do |a, i| %>
+        <%= render "achievements/story", achievement: a, reverse: i.odd?, show_category: @category.nil? %>
+      <% end %>
+      <div class="ach-pagination"><%= paginate @achievements %></div>
+    <% else %>
+      <div class="ach-empty">
+        <i class="fa fa-trophy"></i>
+        <p>Achievements will be published here soon.</p>
+      </div>
+    <% end %>
+  </div>
+</section>
